@@ -6,7 +6,7 @@ Welcome to my project collections :D
 - Coming Soon
 
 ## Python
-- Coming Soon
+- [proj_qrgen](https://github.com/jrkns/proj_qrgen): Massive QR-Code Generator fitting A4 size dimension.
 
 ## Node.js
 - [proj_mysql](https://github.com/jrkns/proj_mysql): Web development using node.js, css, html and mysql.

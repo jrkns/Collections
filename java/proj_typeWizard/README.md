@@ -1,7 +1,6 @@
-# Project_Zombie
+# TypeWizard Game
 
-"Project Spinning"
-Easiest Game Of My Life.
+"Easiest Game Of My Life"
 
 # Goal :
 1. 11 - Initialize Class (Pass)

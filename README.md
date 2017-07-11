@@ -3,7 +3,7 @@
 Welcome to my project collections :D
 
 ## Tensorflow
-- Coming Soon
+- Coming Soon!
 
 ## Python
 - [proj_qrgen](https://github.com/jrkns/proj_qrgen): Massive QR-Code Generator fitting A4 size dimension.
@@ -15,5 +15,7 @@ Welcome to my project collections :D
 - [proj_chatApp](https://github.com/jrkns/proj_chatApp): Chat application (socket) using Java.
 - [proj_typeWizard](https://github.com/jrkns/proj_typeWizard): Game Implementation using Java.
 
+## dJango
+- [proj_simpleWeb](https://github.com/jrkns/proj_simpleWeb): Simple website running by dJango backend.
 ## C
 - [proj_stm32f4](https://github.com/jrkns/proj_stm32f4): STM32F4Discovery Board project.

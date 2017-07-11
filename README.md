@@ -3,7 +3,7 @@
 Welcome to my project collections :D
 
 ## Tensorflow
-- Comming Soon
+- Coming Soon
 
 ## Python
 - Coming Soon

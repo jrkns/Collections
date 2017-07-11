@@ -1,0 +1,30 @@
+{
+  "name": "proj_mySQL",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "latest",
+    "body-parser": "~1.17.1",
+    "chartist": "^0.11.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "express-mysql-session": "latest",
+    "express-session": "latest",
+    "jake": "latest",
+    "lodash": "latest",
+    "morgan": "~1.8.1",
+    "mysql": "~2.3.2",
+    "node-gyp": "latest",
+    "node-mysql-importer": "0.0.10",
+    "passport": "latest",
+    "passport-local": "latest",
+    "password": "latest",
+    "pug": "~2.0.0-beta11",
+    "sequelize": "~1.7.8",
+    "serve-favicon": "~2.4.2"
+  }
+}

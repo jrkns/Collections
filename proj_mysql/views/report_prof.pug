@@ -1,0 +1,188 @@
+extends layout
+
+block content
+    link(href='/css/extends/starter-template.css', rel='stylesheet')
+    body
+    .navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+      .row
+        .col-sm-6
+          .col-sm-1
+          .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='index') Database-Project
+          .collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li.active
+                a(href='#') Site
+              li
+                a(href='about') About
+        .col-sm-5
+        .col-sm-1
+          .collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li
+                a(href='#') #{user_val}
+    .container
+      br
+      br
+      .row
+        .col-sm-2
+          nav.navbar.navbar-default.sidebar(role='navigation')
+            .container-fluid
+              ul.nav.navbar-nav
+                li
+                  a(href='index_prof')
+                    | Home &nbsp; 
+                    span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-home(style='font-size:16px;')
+                li
+                  a(href='profile_prof')
+                    | Profile &nbsp;
+                    span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-user(style='font-size:16px;')
+                li
+                  a(href='course_prof')
+                    | Courses &nbsp;
+                    span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-pencil(style='font-size:16px;')
+                li
+                  a(href='advisee_prof')
+                    | Advisees &nbsp;
+                    span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-bullhorn(style='font-size:16px;')
+                li
+                  a(href='project_prof')
+                    | Projects &nbsp;
+                    span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-file(style='font-size:16px;')
+                li      
+                  a(href='#')
+                    font(class="text-primary") | Report &nbsp;
+                    span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-stats(style='font-size:16px;' class="text-primary")
+                li
+                  a(href='search_info_prof')
+                    | Search &nbsp;
+                    span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-search(style='font-size:16px;')
+                li
+                  a(href='/logout')
+                    | Logout &nbsp;
+                    span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-log-out(style='font-size:16px;')
+        .col-sm-10
+          .container-fluid
+            h1 Report &nbsp; &nbsp;
+            br
+            br
+            | You can generate an information report here.
+            br
+            br
+            br
+            br
+            #accordion.panel-group
+              .panel.panel-default
+                .panel-heading
+                  h4.panel-title
+                    a(data-toggle='collapse', data-parent='#accordion', href='#collapse1')
+                      | Student Enrollment Database
+                #collapse1.panel-collapse.collapse.in
+                  .panel-body
+                    form(method='post' action='/report_prof_e')
+                      .row
+                        .col-sm-2
+                        .col-sm-3
+                          h4 Student ID
+                          input.form-control(type='text' name='input_e_sid' placeholder='10 digits')
+                        .col-sm-2
+                          h4 Year
+                          select.form-control(name = 'input_e_eyear')
+                            option All
+                            option 2016
+                            option 2015
+                            option 2014
+                        .col-sm-4
+                          h4 Semester
+                          .row
+                            .col-sm-6
+                              select.form-control(name = 'input_e_semester')
+                                option All
+                                option 1
+                                option 2
+                                option 3
+                            .col-sm-3
+                              button.btn.btn-md.btn-warning(type='submit') Search
+              .panel.panel-default
+                .panel-heading
+                  h4.panel-title
+                    a(data-toggle='collapse', data-parent='#accordion', href='#collapse2')
+                      | Student Activity Database
+                #collapse2.panel-collapse.collapse
+                  .panel-body
+                    form(method='post' action='/report_prof_a')
+                      .row
+                        .col-sm-4
+                        .col-sm-4
+                          .col-sm-12
+                            h4 Student ID
+                            .row
+                              .col-sm-9
+                                input.form-control(type='text' name='input_a_sid' placeholder='10 digits')
+                              .col-sm-1
+                              .col-sm-2
+                                button.btn.btn-md.btn-warning(type='submit') Search
+              .panel.panel-default
+                .panel-heading
+                  h4.panel-title
+                    a(data-toggle='collapse', data-parent='#accordion', href='#collapse3')
+                      | Parent Information 
+                #collapse3.panel-collapse.collapse
+                  .panel-body
+                    form(method='post' action='/report_prof_p')
+                      .row
+                        .col-sm-4
+                        .col-sm-4
+                          .col-sm-12
+                            h4 Student ID
+                            .row
+                              .col-sm-9
+                                input.form-control(type='text' name='input_p_sid' placeholder='10 digits')
+                              .col-sm-1
+                              .col-sm-2
+                                button.btn.btn-md.btn-warning(type='submit') Search
+              .panel.panel-default
+                .panel-heading
+                  h4.panel-title
+                    a(data-toggle='collapse', data-parent='#accordion', href='#collapse4')
+                      | Internship Database
+                #collapse4.panel-collapse.collapse
+                  .panel-body
+                    h4 By Company <font class='text-muted'>(List)</font>
+                    form(method='post' action='/report_prof_ic')
+                      .row
+                        .col-sm-2
+                        .col-sm-3
+                          h4 Company ID
+                          input.form-control(type='text' name='input_ic_cid' placeholder='10 digits')
+                        .col-sm-4
+                          h4 Company Name
+                          .row
+                            .col-sm-9
+                              input.form-control(type='text' name='input_ic_cname' placeholder='Case-insensitive')
+                            .col-sm-3
+                              button.btn.btn-md.btn-warning(type='submit') Search
+                    br
+                    br
+                    form(method='post' action='/report_prof_is')  
+                      .row  
+                        .col-sm-12
+                          .row
+                            .col-sm-4
+                              h4 By Student <font class='text-muted'>(Personal)</font>
+                            .col-sm-4
+                              input.form-control(type='text' name='input_is_sid' placeholder='Student ID (10 digits)')
+                            .col-sm-3
+                              button.btn.btn-md.btn-warning(type='submit') Search
+            br
+            font(color='red' size='5')= notfound_str
+            
+                    
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src="js/bootstrap.min.js")

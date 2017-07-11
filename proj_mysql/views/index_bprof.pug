@@ -1,0 +1,137 @@
+extends layout
+
+block content
+    link(href='/css/extends/starter-template.css', rel='stylesheet')
+    link(href='/css/extends/stickynote.css', rel='stylesheet')
+    link(href='css/chartist.css', rel='stylesheet')
+    body
+    .navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+      .row
+        .col-sm-6
+          .col-sm-1
+          .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='index') Database-Project
+          .collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li.active
+                a(href='#') Site
+              li
+                a(href='about') About
+        .col-sm-5
+        .col-sm-1
+            .collapse.navbar-collapse
+              ul.nav.navbar-nav
+                li
+                  a(href='#') #{user_val}
+    .container
+      br
+      br
+      .row
+        .col-sm-2
+          nav.navbar.navbar-default.sidebar(role='navigation')
+            .container-fluid
+              ul.nav.navbar-nav
+                li
+                  a(href='#')
+                    font(class="text-primary") | Home &nbsp; 
+                    span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-home(style='font-size:16px;' class="text-primary")
+                li
+                  a(href='profile_prof')
+                    | Profile &nbsp;
+                    span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-user(style='font-size:16px;')
+                li
+                  a(href='course_prof')
+                    | Courses &nbsp;
+                    span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-pencil(style='font-size:16px;')
+                li
+                  a(href='advisee_prof')
+                    | Advisees &nbsp;
+                    span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-bullhorn(style='font-size:16px;')
+                li
+                  a(href='project_prof')
+                    | Projects &nbsp;
+                    span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-file(style='font-size:16px;')
+                li      
+                  a(href='report_prof')
+                    | Report &nbsp;
+                    span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-stats(style='font-size:16px;')
+                li
+                  a(href='search_info_prof')
+                    | Search &nbsp;
+                    span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-search(style='font-size:16px;')
+                li
+                  a(href='/logout')
+                    | Logout &nbsp;
+                    span.pull-right.hidden-xs.showopacity.glyphicon.glyphicon-log-out(style='font-size:16px;')
+        .col-sm-10
+          .container-fluid
+            h1 Welcome back! &nbsp;
+            a(href='profile_prof')
+              font(class='text-primary' size = '6')= 'Prof. ' + results[0].info+' '+results[1].info
+            br
+            br
+            | Please select menu on navigation stack at the left side.
+            br
+            br
+            .row
+              .col-sm-8
+                .col-sm-3(align="center")
+                  h4 Faculty
+                  button.btn.btn-md.btn-default(type='button')
+                    = results[2].info
+                .col-sm-3(align="center")
+                  h4 Department
+                  button.btn.btn-md.btn-default(type='button')
+                    = results[3].info
+                .col-sm-2(align="center")
+                  h4 Course
+                  button.btn.btn-md.btn-default(type='button')
+                    = results[4].info
+                .col-sm-2(align="center")
+                  h4 Advisee
+                  button.btn.btn-md.btn-default(type='button')
+                    = results[5].info
+                .col-sm-2(align="center")
+                  h4 Project
+                  button.btn.btn-md.btn-default(type='button')
+                    = results[6].info
+            br
+            .row
+              .col-sm-6
+                #byyear.ct-chart.ct-perfect-fourth
+              .col-sm-6
+                #bystatus.ct-chart.ct-perfect-fourth
+            .row
+              .col-sm-1
+              .col-sm-5
+                | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size="6" color="d50b18">1</font>  <font size="6" color="ee5c54">2</font> <font size="6" color="f3c54b">3</font> <font size="6" color="cf791f">4</font> <font size="6" color="453d3f">5+</font>
+                h4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Classified by year
+              .col-sm-1
+              .col-sm-4
+                | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b><font size="4" color="d50b18">Probation</font>  
+                br
+                | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size="4" color="ee5c54">Leaving</font>  
+                br
+                | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size="4" color="f3c54b">Studyabroad</font></b>
+                h4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Classified by status
+
+            
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src="js/bootstrap.min.js")
+    script(src='js/chartist.min.js')
+    script.
+      var y1 = #{year1};
+      var y2 = #{year2};
+      var y3 = #{year3};
+      var y4 = #{year4};
+      var y5 = #{year5};
+      var pro = #{probation};
+      var leave = #{leaving};
+      var abroad = #{studyabroad};
+    script(src='js/bpf_chart.js')

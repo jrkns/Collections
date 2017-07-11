@@ -1,0 +1,16 @@
+fieldset {
+  border: none;
+}
+
+.formholder {
+  background: #fff;
+  width: 350px;
+  height: 400px;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.randompad {
+  padding: 10px;
+}

@@ -3,7 +3,7 @@
 Welcome to my project collections :D
 
 ## Tensorflow
-- Coming Soon!
+- [ML](https://github.com/jrkns/ML): See in machine learning section.
 
 ## Python
 - [proj_qrgen](https://github.com/jrkns/proj_qrgen): Massive QR-Code Generator fitting A4 size dimension.

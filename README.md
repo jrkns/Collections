@@ -8,6 +8,7 @@ Welcome to my project collections :D
 ## Python
 - [proj_qrgen](https://github.com/jrkns/proj_qrgen): Massive QR-Code Generator fitting A4 size dimension.
 - [dogebotJr](https://github.com/jrkns/dogebotJr): Python-based Line Chatbot.
+- [digi_images](https://github.com/jrkns/digi_images): Intro to Digital Image Processing coursework.
 
 ## Node.js
 - [proj_mysql](https://github.com/jrkns/proj_mysql): Web development using node.js, css, html and mysql.

@@ -6,6 +6,7 @@ Welcome to my project collections :D
 - [ML](https://github.com/jrkns/ML): See in machine learning section.
 
 ## Python
+- [werewolf-bot](https://github.com/jrkns/werewolf-bot): Werewolf-role cards dealer by LINE chatbot.
 - [proj_qrgen](https://github.com/jrkns/proj_qrgen): Massive QR-Code Generator fitting A4 size dimension.
 - [dogebotJr](https://github.com/jrkns/dogebotJr): Python-based Line Chatbot.
 - [digi_images](https://github.com/jrkns/digi_images): Intro to Digital Image Processing coursework.
